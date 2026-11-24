@@ -26,7 +26,7 @@ router.get("/", getAllCourses);
 router.get(
   "/my-courses",
   protect,
-  authorize("instructor", "admin"),
+  authorize("instructor", "admin", "student"),
   getMyCourses
 );
 
