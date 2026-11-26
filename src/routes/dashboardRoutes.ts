@@ -7,7 +7,7 @@ import { getMyEnrolledCourses } from "../controllers/enrollmentController.js";
 const router = Router();
 
 // Protected student dashboard
-router.get("/dashboard", protect, getStudentDashboard);
+router.get("/dashboard", protect,  authorize("student"), getStudentDashboard);
 router.get(
   "/my-courses",
   protect,

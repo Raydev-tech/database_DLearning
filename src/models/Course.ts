@@ -111,7 +111,7 @@ const courseSchema = new Schema<ICourse>(
 
     isPublished: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   {
