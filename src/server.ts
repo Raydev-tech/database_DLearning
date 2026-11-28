@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
+import instructorRoutes from "./routes/instructorRoutes.js";
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/student", dashboardRoutes);
 app.use("/api/courses", courseRoutes);
+app.use("/api/instructor", instructorRoutes);
 
 // Health check
 app.get("/", (_req, res) => {
